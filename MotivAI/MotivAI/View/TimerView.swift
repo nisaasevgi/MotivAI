@@ -21,7 +21,7 @@ struct TimerView: View {
         VStack(spacing: 20) {
             Spacer(minLength: 5)
             
-            TextField("Ne çalışcaksın?(örn: veri yapıları)", text: $viewModel.currentWorkType)
+            TextField("What will you study?", text: $viewModel.currentWorkType)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding(.horizontal, 40)
                 .multilineTextAlignment(.center)

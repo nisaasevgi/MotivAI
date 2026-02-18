@@ -53,7 +53,7 @@ class MotivAIViewModel: ObservableObject{
                 isRunning = false
                 
                 let durationMinutes = totalTime / 60
-                let finalWorkType = currentWorkType.isEmpty ? "Genel Çalışma" : currentWorkType
+                let finalWorkType = currentWorkType.isEmpty ? "General Study" : currentWorkType
                 addSessionToHistory(workType: finalWorkType, duration: durationMinutes, context: context)
                 currentWorkType = ""
             }
@@ -77,6 +77,6 @@ class MotivAIViewModel: ObservableObject{
     func addSessionToHistory(workType: String, duration: Int, context: ModelContext){
         let newSession = StudyTarget(title: workType, completedMinutes: duration, targetMinutes: duration)
         context.insert(newSession)
-        print("SwiftData'ya kalıcı olarak kaydedildi: \(workType)")
+        print("Permanently saved to SwiftData: \(workType)")
     }
 }
